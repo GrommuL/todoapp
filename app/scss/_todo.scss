@@ -1,0 +1,138 @@
+.todo{
+    max-width: 500px;
+    min-height: 500px;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-top: 150px;
+    &-title{
+        text-align: center;
+        margin-bottom: 50px;
+        font-size: 50px;
+        font-weight: 700;
+        line-height: 50px;
+        background: $mainGradient;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+    }
+    &-button{
+        width: 368px;
+        height: 50px;
+        padding: 13px 15px;
+        font-weight: 700;
+        font-size: 20px;
+        line-height: 24px;
+        color: $blackMain;
+        background: $mainGradient;
+        background-blend-mode: overlay, normal, normal, normal, normal;
+        border-radius: 15px;
+        transition: transform .4s linear;
+        &:hover{
+            transform: scale(1.03);
+        }
+    }
+}
+
+
+.overlay{
+    display: none;
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    background: rgba(20, 20, 20, .8);
+}
+.popup{
+    position: relative;
+    width: 500px;
+    height: 300px;
+    background: #1E1E1E;;
+    position: absolute;
+    top: 47%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    border-radius: 15px;
+    &__form{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding-top: 70px;
+        &-close{
+            position: absolute;
+            top: 20px;
+            right: 35px;
+            font-weight: 700;
+            font-size: 40px;
+            line-height: 24px;
+            padding: 5px;
+            background: $mainGradient;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            transform: rotate(45deg);
+            &:hover{
+                animation: rotate .3s linear;
+            }
+        }
+        &-title{
+            font-weight: 700;
+            font-size: 20px;
+            line-height: 24px;
+            margin-bottom: 30px;
+        }
+        &-input{
+            width: 398px;
+            height: 39px;
+            border-radius: 10px;
+            margin-bottom: 10px;
+            background: $white;
+            padding: 0 15px;
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 19px;
+            color: $blackDark;
+            &:focus{
+                outline: 2px solid $blueLight;
+            }
+        }
+        &-complete{
+            visibility: hidden;
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 19px;
+            color: lawngreen;
+            margin-bottom: 15px;
+        }
+        &-button{
+            width: 118px;
+            height: 54px;
+            font-weight: 700;
+            font-size: 20px;
+            line-height: 24px;
+            color: $blackMain;
+            background: $mainGradient;
+            background-blend-mode: overlay, normal, normal, normal, normal;
+            border-radius: 15px;
+            transition: transform .4s linear;
+            &:hover{
+                transform: scale(1.03);
+            }
+        }
+    }
+}
+
+@keyframes rotate{
+    0%{
+    transform: rotate(45deg);
+    } 100% {
+        transform: rotate(360deg);
+    }
+}

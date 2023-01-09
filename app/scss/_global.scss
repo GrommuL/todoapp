@@ -1,0 +1,36 @@
+@import url('https://fonts.googleapis.com/css2?family=Georama:wght@400;700&display=swap');
+
+
+
+body{
+    font-family: 'Georama', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    background: $blackMain;
+    color: $white;
+}
+
+::-webkit-scrollbar {
+    width: 2px;
+}
+::-webkit-scrollbar-track {
+    background: $blackDark;
+}
+::-webkit-scrollbar-thumb {
+    background: $mainGradient;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: $blueLight;
+}
+svg{
+    width: 23px;
+    height: 23px;
+}
+
+@import './todo';
+@import './content';

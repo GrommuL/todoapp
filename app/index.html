@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.min.css">
+</head>
+<body>
+    <div class="todo">
+        <h1 class="todo-title">ToDo</h1>
+        <button class="todo-button">New ToDo</button>
+        <div class="content">
+            <div class="content__top">
+                <svg class="content__top-icon"><use xlink:href="sprite.svg#tasks"></use></svg>
+                <div class="content__top-buttons">
+                    <button class="content__top-btn active content__top-btn-active" type="button">Active</button>
+                    <button class="content__top-btn content__top-btn-done" type="button">Done</button>
+                    <button class="content__top-btn content__top-btn-all" type="button">All</button>
+                </div>
+            </div>
+            <ul class="content__list">
+
+            </ul>
+            <h3 class="content__empty"></h3>
+            <p class="content__count">Tasks: <span class="content__count-num">0 / 0</span></p>
+        </div>
+    </div>
+    <div class="overlay">
+        <div class="popup">
+            <form class="popup__form">
+                <button class="popup__form-close" type="button">+</button>
+                <h2 class="popup__form-title">Create a new task</h2>
+                <input class="popup__form-input" type="text" placeholder="Enter your task">
+                <p class="popup__form-complete">Task successful added</p>
+                <button class="popup__form-button" type="submit">Add</button>
+            </form>
+        </div>
+    </div>
+<script src="js/main.min.js"></script>
+</body>
+</html>

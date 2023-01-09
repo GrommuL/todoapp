@@ -1,0 +1,120 @@
+.content{
+    &__top{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-top: 50px;
+        padding: 15px;
+        width: 500px;
+        background: $blackDark;
+        border-top-left-radius: 15px;
+        border-top-right-radius: 15px;
+        &-icon{
+            width: 23px;
+            height: 23px;
+        }
+        &-buttons{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 20px;
+        }
+        &-btn{
+            padding: 5px 15px;
+            border-radius: 15px;
+            border: 2px solid $blueDark;
+            background: transparent;
+            font-weight: 700;
+            font-size: 13px;
+            line-height: 15px;
+            color: $white;
+        }
+    }
+    &__list{
+        height: 325px;
+        overflow-y: auto;
+        scroll-behavior: smooth;
+        &-item{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px;
+            background: $blackDark;
+            border-bottom: 1px solid $blackMain;
+            &-left{
+                display: flex;
+                align-items: center;
+                gap: 10px;
+            }
+            &-text{
+                display: none;
+                font-weight: 400;
+                font-size: 16px;
+                line-height: 19px;
+                color: $white;
+                cursor: pointer;
+            }
+            &-input{
+                display: inline-block;
+                border: none;
+                outline: none;
+                font-weight: 400;
+                font-size: 16px;
+                line-height: 19px;
+                width: 350px;
+                background: $blackDark;
+                color: $white;
+            }
+            &-done{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                border-radius: 50%;
+                background: transparent;
+                width: 23px;
+                height: 23px;
+            }
+            &-save{
+                display: none;
+                padding: 5px 15px;
+                border-radius: 15px;
+                background: $mainGradient;
+                color: $blackMain;
+                font-weight: 700;
+                font-size: 13px;
+                line-height: 15px;
+            }
+            &-cancel{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                border-radius: 50%;
+                background: transparent;
+                width: 23px;
+                height: 23px;
+            }
+        }
+    }
+    &__empty{
+        padding: 20px 0 30px;
+        text-align: center;
+        font-size: 35px;
+        display: none;
+    }
+    &__count{
+        padding: 10px;
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 19px;
+        background: $mainGradient;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+    }
+}
+.content__top-btn.active{
+    background: $mainGradient;
+    color: $blackMain;
+    border: none;
+    padding: 7px 17px;
+}
